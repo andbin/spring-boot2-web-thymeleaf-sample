@@ -1,0 +1,27 @@
+.java-runtime-version {
+    color: #0000FF;
+}
+
+.spring-version {
+    color: #0000FF;
+}
+
+.spring-boot-version {
+    color: #0000FF;
+}
+
+.thymeleaf-version {
+    color: #0000FF;
+}
+
+.server-info {
+    color: #000000;
+}
+
+.vm-start-time {
+    color: #00B000;
+}
+
+.current-time {
+    color: #FF0000;
+}
