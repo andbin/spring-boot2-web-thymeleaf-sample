@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Andrea Binello ("andbin")
+ * Copyright (C) 2019-2020 Andrea Binello ("andbin")
  *
  * This file is part of the "Spring Boot 2 Web Thymeleaf Sample" project
  * and is released under the MIT License. See one of the license files
