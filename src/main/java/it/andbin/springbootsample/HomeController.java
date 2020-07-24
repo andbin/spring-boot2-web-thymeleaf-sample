@@ -6,7 +6,7 @@
  * included in the root of the project for the full text of the license.
  */
 
-package net.andbin.springbootsample;
+package it.andbin.springbootsample;
 
 import java.util.function.Supplier;
 import org.springframework.beans.factory.annotation.Autowired;
