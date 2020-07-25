@@ -6,7 +6,7 @@
    and is released under the MIT License. See one of the license files
    included in the root of the project for the full text of the license.
 */-->
-<html th:lang="#{messages.lang.code}" xmlns:th="http://www.thymeleaf.org">
+<html th:lang="#{messages.html.lang}" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" th:href="@{/reset.css}" type="text/css">
@@ -21,7 +21,7 @@
 <table class="info">
   <tr>
     <td class="label">
-      <span th:text="#{javaRuntime.version.label}">Java Runtime version</span>
+      <span th:text="#{javaRuntimeVersion.label}">Java Runtime version</span>
     </td>
     <td class="value java-runtime-version">
       <span th:text="${appInfo.javaRuntimeVersion}">???</span>
@@ -30,7 +30,7 @@
 
   <tr>
     <td class="label">
-      <span th:text="#{spring.version.label}">Spring version</span>
+      <span th:text="#{springVersion.label}">Spring version</span>
     </td>
     <td class="value spring-version">
       <span th:text="${appInfo.springVersion}">???</span>
@@ -39,7 +39,7 @@
 
   <tr>
     <td class="label">
-      <span th:text="#{springBoot.version.label}">Spring Boot version</span>
+      <span th:text="#{springBootVersion.label}">Spring Boot version</span>
     </td>
     <td class="value spring-boot-version">
       <span th:text="${appInfo.springBootVersion}">???</span>
@@ -48,7 +48,7 @@
 
   <tr>
     <td class="label">
-      <span th:text="#{thymeleaf.version.label}">Thymeleaf version</span>
+      <span th:text="#{thymeleafVersion.label}">Thymeleaf version</span>
     </td>
     <td class="value thymeleaf-version">
       <span th:text="${appInfo.thymeleafVersion}">???</span>
@@ -57,7 +57,7 @@
 
   <tr>
     <td class="label">
-      <span th:text="#{server.info.label}">Server</span>
+      <span th:text="#{serverInfo.label}">Server</span>
     </td>
     <td class="value server-info">
       <span th:text="${appInfo.serverInfo}">???</span>
@@ -66,7 +66,7 @@
 
   <tr>
     <td class="label">
-      <span th:text="#{vm.startTime.label}">VM start time</span>
+      <span th:text="#{vmStartTime.label}">VM start time</span>
     </td>
     <td class="value vm-start-time">
       <span th:text="${#temporals.format(appInfo.vmStartTime, #locale)}">???</span>
