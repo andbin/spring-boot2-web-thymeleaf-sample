@@ -6,22 +6,22 @@
  * included in the root of the project for the full text of the license.
  */
 
-package it.andbin.springbootsample;
+package it.andbin.springbootsample.controller;
 
-import java.util.function.Supplier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import it.andbin.springbootsample.service.AppInfoService;
 
 @Controller
 public class HomeController {
     @Autowired
-    private Supplier<AppInfo> appInfoSupplier;
+    private AppInfoService appInfoService;
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("appInfo", appInfoSupplier.get());
+        model.addAttribute("appInfo", appInfoService.getAppInfo());
         return "home";
     }
 }

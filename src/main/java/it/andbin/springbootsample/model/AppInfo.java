@@ -6,7 +6,7 @@
  * included in the root of the project for the full text of the license.
  */
 
-package it.andbin.springbootsample;
+package it.andbin.springbootsample.model;
 
 import java.time.ZonedDateTime;
 
