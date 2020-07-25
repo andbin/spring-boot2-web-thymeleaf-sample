@@ -6,8 +6,9 @@ body {
 
 h1 {
     font-size: 180%;
+    font-weight: bold;
     padding-bottom: 0.3em;
-    border-bottom: 3px solid black;
+    border-bottom: 0.1em solid black;
     margin: 0em 0em 1.2em 0em;
 }
 
@@ -19,12 +20,12 @@ table.info {
 table.info td {
     text-align: left;
     font-weight: normal;
-    padding: 0.4em;
+    padding: 0.45em;
     border: 1px solid #808080;
 }
 
 table.info td.label {
-    background: #F4F4F4;
+    background: #F8F8F8;
 }
 
 table.info td.value span {
