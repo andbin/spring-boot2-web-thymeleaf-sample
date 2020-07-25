@@ -1,6 +1,10 @@
+[![Java language](https://img.shields.io/badge/language-Java-bf7b3b.svg)](https://www.oracle.com/java/ "Java language")
+[![Built with Apache Maven](https://img.shields.io/badge/built_with-Apache_Maven-f69625.svg)](http://maven.apache.org "Built with Apache Maven")
+[![MIT License](https://img.shields.io/badge/license-MIT-1e90ff.svg)](MIT-LICENSE.md "MIT License")
+
 # Spring Boot 2 Web Thymeleaf Sample
 
-The &ldquo;Spring Boot 2 Web Thymeleaf Sample&rdquo; is a basic and minimal [Maven](https://maven.apache.org "Apache Maven")-based project to show how to use [Thymeleaf](https://www.thymeleaf.org) (a modern server-side Java *template engine*) with [Spring Boot](https://spring.io/projects/spring-boot) version 2.x. This project is exclusively developed by [Andrea Binello](http://www.andbin.net) (&ldquo;andbin&rdquo;).
+The &ldquo;Spring Boot 2 Web Thymeleaf Sample&rdquo; is a basic and minimal [Maven](https://maven.apache.org "Apache Maven")-based project to show how to use [Thymeleaf](https://www.thymeleaf.org) (a modern server-side Java *template engine*) with [Spring Boot](https://spring.io/projects/spring-boot) version 2.x. This project is exclusively developed by [Andrea Binello](https://andbin.it/who-i-am) (&ldquo;andbin&rdquo;).
 
 
 ## License
