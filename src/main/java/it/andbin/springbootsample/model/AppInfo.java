@@ -11,6 +11,10 @@ package it.andbin.springbootsample.model;
 import java.time.ZonedDateTime;
 
 public class AppInfo {
+    private String javaVmName;
+    private String javaVmVendor;
+    private String javaVmVersion;
+    private String javaRuntimeName;
     private String javaRuntimeVersion;
     private String springVersion;
     private String springBootVersion;
@@ -18,6 +22,38 @@ public class AppInfo {
     private String serverInfo;
     private ZonedDateTime vmStartTime;
     private ZonedDateTime currentTime;
+
+    public String getJavaVmName() {
+        return javaVmName;
+    }
+
+    public void setJavaVmName(String javaVmName) {
+        this.javaVmName = javaVmName;
+    }
+
+    public String getJavaVmVendor() {
+        return javaVmVendor;
+    }
+
+    public void setJavaVmVendor(String javaVmVendor) {
+        this.javaVmVendor = javaVmVendor;
+    }
+
+    public String getJavaVmVersion() {
+        return javaVmVersion;
+    }
+
+    public void setJavaVmVersion(String javaVmVersion) {
+        this.javaVmVersion = javaVmVersion;
+    }
+
+    public String getJavaRuntimeName() {
+        return javaRuntimeName;
+    }
+
+    public void setJavaRuntimeName(String javaRuntimeName) {
+        this.javaRuntimeName = javaRuntimeName;
+    }
 
     public String getJavaRuntimeVersion() {
         return javaRuntimeVersion;

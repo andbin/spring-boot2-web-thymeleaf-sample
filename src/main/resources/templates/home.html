@@ -21,6 +21,42 @@
 <table class="info">
   <tr>
     <td class="label">
+      <span th:text="#{javaVmName.label}">Java VM name</span>
+    </td>
+    <td class="value java-vm-name">
+      <span th:text="${appInfo.javaVmName}">???</span>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="label">
+      <span th:text="#{javaVmVendor.label}">Java VM vendor</span>
+    </td>
+    <td class="value java-vm-vendor">
+      <span th:text="${appInfo.javaVmVendor}">???</span>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="label">
+      <span th:text="#{javaVmVersion.label}">Java VM version</span>
+    </td>
+    <td class="value java-vm-version">
+      <span th:text="${appInfo.javaVmVersion}">???</span>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="label">
+      <span th:text="#{javaRuntimeName.label}">Java Runtime name</span>
+    </td>
+    <td class="value java-runtime-name">
+      <span th:text="${appInfo.javaRuntimeName}">???</span>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="label">
       <span th:text="#{javaRuntimeVersion.label}">Java Runtime version</span>
     </td>
     <td class="value java-runtime-version">

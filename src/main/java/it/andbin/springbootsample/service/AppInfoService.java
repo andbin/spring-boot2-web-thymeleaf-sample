@@ -28,6 +28,10 @@ public class AppInfoService {
 
     public AppInfo getAppInfo() {
         AppInfo appInfo = new AppInfo();
+        appInfo.setJavaVmName(getJavaVmName());
+        appInfo.setJavaVmVendor(getJavaVmVendor());
+        appInfo.setJavaVmVersion(getJavaVmVersion());
+        appInfo.setJavaRuntimeName(getJavaRuntimeName());
         appInfo.setJavaRuntimeVersion(getJavaRuntimeVersion());
         appInfo.setSpringVersion(getSpringVersion());
         appInfo.setSpringBootVersion(getSpringBootVersion());
@@ -36,6 +40,22 @@ public class AppInfoService {
         appInfo.setVmStartTime(getVmStartZonedDateTime());
         appInfo.setCurrentTime(getCurrentZonedDateTime());
         return appInfo;
+    }
+
+    private String getJavaVmName() {
+        return runtimeMXBean.getVmName();
+    }
+
+    private String getJavaVmVendor() {
+        return runtimeMXBean.getVmVendor();
+    }
+
+    private String getJavaVmVersion() {
+        return runtimeMXBean.getVmVersion();
+    }
+
+    private String getJavaRuntimeName() {
+        return System.getProperty("java.runtime.name");
     }
 
     private String getJavaRuntimeVersion() {
