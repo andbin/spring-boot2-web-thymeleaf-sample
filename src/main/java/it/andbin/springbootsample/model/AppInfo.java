@@ -19,6 +19,7 @@ public class AppInfo {
     private String springVersion;
     private String springBootVersion;
     private String thymeleafVersion;
+    private String slf4jVersion;
     private String serverInfo;
     private ZonedDateTime vmStartTime;
     private ZonedDateTime currentTime;
@@ -85,6 +86,14 @@ public class AppInfo {
 
     public void setThymeleafVersion(String thymeleafVersion) {
         this.thymeleafVersion = thymeleafVersion;
+    }
+
+    public String getSlf4jVersion() {
+        return slf4jVersion;
+    }
+
+    public void setSlf4jVersion(String slf4jVersion) {
+        this.slf4jVersion = slf4jVersion;
     }
 
     public String getServerInfo() {

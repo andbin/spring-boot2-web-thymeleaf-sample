@@ -44,6 +44,7 @@ public class AppInfoService {
         appInfo.setSpringVersion(getSpringVersion());
         appInfo.setSpringBootVersion(getSpringBootVersion());
         appInfo.setThymeleafVersion(getThymeleafVersion());
+        appInfo.setSlf4jVersion(getSlf4jVersion());
         appInfo.setServerInfo(getServerInfo());
         appInfo.setVmStartTime(getVmStartZonedDateTime());
         appInfo.setCurrentTime(getCurrentZonedDateTime());
@@ -80,6 +81,11 @@ public class AppInfoService {
 
     private String getThymeleafVersion() {
         return Thymeleaf.VERSION;
+    }
+
+    private String getSlf4jVersion() {
+        Package slf4jPackage = Package.getPackage("org.slf4j");
+        return slf4jPackage != null ? slf4jPackage.getImplementationVersion() : null;
     }
 
     private String getServerInfo() {

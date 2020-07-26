@@ -96,6 +96,15 @@
 
     <tr>
       <td class="label">
+        <span th:text="#{slf4jVersion.label}">SLF4J version</span>
+      </td>
+      <td class="value slf4j-version">
+        <span th:text="${appInfo.slf4jVersion}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
         <span th:text="#{serverInfo.label}">Server</span>
       </td>
       <td class="value server-info">
