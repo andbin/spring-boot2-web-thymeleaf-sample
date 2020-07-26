@@ -6,7 +6,7 @@
    and is released under the MIT License. See one of the license files
    included in the root of the project for the full text of the license.
 */-->
-<html th:lang="#{messages.html.lang}" xmlns:th="http://www.thymeleaf.org">
+<html th:lang="#{html.lang}" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" th:href="@{/reset.css}" type="text/css">
@@ -16,108 +16,117 @@
 </head>
 <body>
 
-<h1 lang="en">Spring Boot 2 Web Thymeleaf Sample</h1>
+<header>
+  <h1 lang="en">Spring Boot 2 Web Thymeleaf Sample</h1>
+</header>
 
-<table class="info">
-  <tr>
-    <td class="label">
-      <span th:text="#{javaVmName.label}">Java VM name</span>
-    </td>
-    <td class="value java-vm-name">
-      <span th:text="${appInfo.javaVmName}">???</span>
-    </td>
-  </tr>
+<section id="main">
+  <table class="info">
+    <tr>
+      <td class="label">
+        <span th:text="#{javaVmName.label}">Java VM name</span>
+      </td>
+      <td class="value java-vm-name">
+        <span th:text="${appInfo.javaVmName}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{javaVmVendor.label}">Java VM vendor</span>
-    </td>
-    <td class="value java-vm-vendor">
-      <span th:text="${appInfo.javaVmVendor}">???</span>
-    </td>
-  </tr>
+    <tr>
+      <td class="label">
+        <span th:text="#{javaVmVendor.label}">Java VM vendor</span>
+      </td>
+      <td class="value java-vm-vendor">
+        <span th:text="${appInfo.javaVmVendor}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{javaVmVersion.label}">Java VM version</span>
-    </td>
-    <td class="value java-vm-version">
-      <span th:text="${appInfo.javaVmVersion}">???</span>
-    </td>
-  </tr>
+    <tr>
+      <td class="label">
+        <span th:text="#{javaVmVersion.label}">Java VM version</span>
+      </td>
+      <td class="value java-vm-version">
+        <span th:text="${appInfo.javaVmVersion}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{javaRuntimeName.label}">Java Runtime name</span>
-    </td>
-    <td class="value java-runtime-name">
-      <span th:text="${appInfo.javaRuntimeName}">???</span>
-    </td>
-  </tr>
+    <tr>
+      <td class="label">
+        <span th:text="#{javaRuntimeName.label}">Java Runtime name</span>
+      </td>
+      <td class="value java-runtime-name">
+        <span th:text="${appInfo.javaRuntimeName}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{javaRuntimeVersion.label}">Java Runtime version</span>
-    </td>
-    <td class="value java-runtime-version">
-      <span th:text="${appInfo.javaRuntimeVersion}">???</span>
-    </td>
-  </tr>
+    <tr>
+      <td class="label">
+        <span th:text="#{javaRuntimeVersion.label}">Java Runtime version</span>
+      </td>
+      <td class="value java-runtime-version">
+        <span th:text="${appInfo.javaRuntimeVersion}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{springVersion.label}">Spring version</span>
-    </td>
-    <td class="value spring-version">
-      <span th:text="${appInfo.springVersion}">???</span>
-    </td>
-  </tr>
+    <tr>
+      <td class="label">
+        <span th:text="#{springVersion.label}">Spring version</span>
+      </td>
+      <td class="value spring-version">
+        <span th:text="${appInfo.springVersion}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{springBootVersion.label}">Spring Boot version</span>
-    </td>
-    <td class="value spring-boot-version">
-      <span th:text="${appInfo.springBootVersion}">???</span>
-    </td>
-  </tr>
+    <tr>
+      <td class="label">
+        <span th:text="#{springBootVersion.label}">Spring Boot version</span>
+      </td>
+      <td class="value spring-boot-version">
+        <span th:text="${appInfo.springBootVersion}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{thymeleafVersion.label}">Thymeleaf version</span>
-    </td>
-    <td class="value thymeleaf-version">
-      <span th:text="${appInfo.thymeleafVersion}">???</span>
-    </td>
-  </tr>
+    <tr>
+      <td class="label">
+        <span th:text="#{thymeleafVersion.label}">Thymeleaf version</span>
+      </td>
+      <td class="value thymeleaf-version">
+        <span th:text="${appInfo.thymeleafVersion}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{serverInfo.label}">Server</span>
-    </td>
-    <td class="value server-info">
-      <span th:text="${appInfo.serverInfo}">???</span>
-    </td>
-  </tr>
+    <tr>
+      <td class="label">
+        <span th:text="#{serverInfo.label}">Server</span>
+      </td>
+      <td class="value server-info">
+        <span th:text="${appInfo.serverInfo}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{vmStartTime.label}">VM start time</span>
-    </td>
-    <td class="value vm-start-time">
-      <span th:text="${#temporals.format(appInfo.vmStartTime, #locale)}">???</span>
-    </td>
-  </tr>
+    <tr>
+      <td class="label">
+        <span th:text="#{vmStartTime.label}">VM start time</span>
+      </td>
+      <td class="value vm-start-time">
+        <span th:text="${#temporals.format(appInfo.vmStartTime, #locale)}">???</span>
+      </td>
+    </tr>
 
-  <tr>
-    <td class="label">
-      <span th:text="#{currentTime.label}">Current time</span>
-    </td>
-    <td class="value current-time">
-      <span th:text="${#temporals.format(appInfo.currentTime, #locale)}">???</span>
-    </td>
-  </tr>
-</table>
+    <tr>
+      <td class="label">
+        <span th:text="#{currentTime.label}">Current time</span>
+      </td>
+      <td class="value current-time">
+        <span th:text="${#temporals.format(appInfo.currentTime, #locale)}">???</span>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<footer>
+  <span th:text="#{appDescription.label}"></span> &nbsp;&mdash;&nbsp; <span th:text="#{developedBy.label}"></span>
+  <a th:href="#{authorPage.url}">andbin</a>
+</footer>
 
 </body>
 </html>

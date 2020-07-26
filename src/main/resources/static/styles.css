@@ -1,7 +1,24 @@
 body {
     font-family: sans-serif;
-    margin: 2em;
     background-color: white;
+}
+
+header {
+    margin: 2em;
+}
+
+#main {
+    margin: 0em 2em 5em 2em;
+}
+
+footer {
+    font-size: 90%;
+    border-top: 1px solid #A0A0A0;
+    background: #F0F0F0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.6em;
 }
 
 h1 {
@@ -9,7 +26,6 @@ h1 {
     font-weight: bold;
     padding-bottom: 0.3em;
     border-bottom: 0.1em solid black;
-    margin: 0em 0em 1.2em 0em;
 }
 
 
