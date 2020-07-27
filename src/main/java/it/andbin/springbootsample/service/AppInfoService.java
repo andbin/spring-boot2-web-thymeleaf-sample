@@ -13,7 +13,6 @@ import java.lang.management.RuntimeMXBean;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import javax.annotation.PostConstruct;
 import javax.servlet.ServletContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringBootVersion;
@@ -26,13 +25,6 @@ import it.andbin.springbootsample.model.AppInfo;
 public class AppInfoService {
     @Autowired
     private ServletContext servletContext;
-
-    private RuntimeMXBean runtimeMXBean;
-
-    @PostConstruct
-    private void initialize() {
-        runtimeMXBean = ManagementFactory.getRuntimeMXBean();
-    }
 
     public AppInfo getAppInfo() {
         AppInfo appInfo = new AppInfo();
@@ -52,15 +44,15 @@ public class AppInfoService {
     }
 
     private String getJavaVmName() {
-        return runtimeMXBean.getVmName();
+        return getRuntimeMXBean().getVmName();
     }
 
     private String getJavaVmVendor() {
-        return runtimeMXBean.getVmVendor();
+        return getRuntimeMXBean().getVmVendor();
     }
 
     private String getJavaVmVersion() {
-        return runtimeMXBean.getVmVersion();
+        return getRuntimeMXBean().getVmVersion();
     }
 
     private String getJavaRuntimeName() {
@@ -97,10 +89,14 @@ public class AppInfoService {
     }
 
     private Instant getVmStartInstant() {
-        return Instant.ofEpochMilli(runtimeMXBean.getStartTime());
+        return Instant.ofEpochMilli(getRuntimeMXBean().getStartTime());
     }
 
     private ZonedDateTime getCurrentZonedDateTime() {
         return ZonedDateTime.now();
+    }
+
+    private static RuntimeMXBean getRuntimeMXBean() {
+        return ManagementFactory.getRuntimeMXBean();
     }
 }
